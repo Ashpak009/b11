@@ -4,7 +4,8 @@ on: push
 
 jobs:
   first:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
+
     steps:
       - name: print message
         run: echo "hello Ashpak bro"
