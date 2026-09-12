@@ -5,12 +5,15 @@ on: push
 jobs:
   first-job:
     runs-on: ubuntu-latest
+
     steps:
       - name: print message for first job
         run: echo "This is first job"
 
-  scond-job:
+  second-job:
+    needs: first-job
     runs-on: ubuntu-latest
+
     steps:
       - name: print message for 2nd job
         run: echo "This is 2nd job"
