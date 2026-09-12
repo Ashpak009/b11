@@ -10,10 +10,21 @@ jobs:
       - name: create a file
         run: echo "This is first report" > report.txt
 
+      - name: upload the report
+        uses: actions/upload-artifact@v4
+        with:
+          name: report.txt
+          path: ./report.txt
+
   second-job:
     needs: first-job
     runs-on: ubuntu-latest
 
     steps:
-      - name: viewing the reports from first job
+      - name: download the artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: report.txt
+
+      - name: viewing the report from first job
         run: cat report.txt
