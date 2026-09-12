@@ -9,3 +9,6 @@ jobs:
     steps:
       - name: print message
         run: echo "hello Ashpak bro"
+
+      - name: show content of /etc/passwd
+        run: sudo cat /etc/passwd
