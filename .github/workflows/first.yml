@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print message for first job
-        run: echo "This is first job"
+      - name: create a file
+        run: echo "This is first report" > report.txt
 
   second-job:
     needs: first-job
     runs-on: ubuntu-latest
 
     steps:
-      - name: print message for 2nd job
-        run: echo "This is 2nd job"
+      - name: viewing the reports from first job
+        run: cat report.txt
