@@ -1,7 +1,7 @@
 {
-  "name": "b11",
+  "name": "node-docker-app",
   "version": "1.0.0",
-  "description": "Simple Node.js application",
+  "description": "Node.js Docker application",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
