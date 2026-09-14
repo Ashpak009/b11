@@ -31,4 +31,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: b11ashpak/app:latest
+          tags: aashpak/app:latest
